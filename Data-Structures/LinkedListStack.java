@@ -1,8 +1,8 @@
-/**
+/**1
  * 利用链表实现栈
  *
- * @author ronglexie
- * @version 2018/8/12
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class LinkedListStack<E> implements Stack<E>{
 

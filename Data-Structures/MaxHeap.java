@@ -1,9 +1,9 @@
-/**
+/**1
  * 最大堆
  * 完全二叉树实现、树中的根结点都表示树中的最大元素结点
  *
- * @author ronglexie
- * @version 2018/8/19
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class MaxHeap<E extends Comparable<E>> {
 
@@ -30,8 +30,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int parent(int index){
 		if(index == 0){
@@ -45,8 +45,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int leftChild(int index){
 		return (index * 2) + 1;
@@ -57,8 +57,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int rightChild(int index){
 		return (index * 2) + 2;
@@ -69,8 +69,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void add(E e){
 		data.addLast(e);
@@ -82,8 +82,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param k
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private void shifUp(int k) {
 		while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) < 0){
@@ -97,8 +97,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E findMax(){
 		if(data .getSize() == 0){
@@ -112,8 +112,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/20
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E extractMax(){
 		E result = findMax();
@@ -130,8 +130,8 @@ public class MaxHeap<E extends Comparable<E>> {
 	 *
 	 * @param k
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/25
+	 * @author kenqia
+	 * @version 2025/2/25
 	 */
 	private void siftDown(int k) {
 		while (k >= 0 && leftChild(k) < data.getSize()){

@@ -1,9 +1,9 @@
-/**
+/**1
  * 最小堆
  * 完全二叉树实现、树中的根结点都表示树中的最小元素结点
- *
- * @author ronglexie
- * @version 2018/8/25
+ * 数组实现
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class MinHeap<E extends Comparable<E>> {
 
@@ -28,10 +28,15 @@ public class MinHeap<E extends Comparable<E>> {
 	/**
 	 * 查找用数组实现的完全二叉树中该索引下节点的父亲节点的索引
 	 *
+	 *
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/19
+	 *
+	 * 0 5 1 8 8 6 7 9 10 10
+	 * 0 1 2 3 4 5 6 7 8 9
+	 * 按照自上而下排序树节点
 	 */
 	public int parent(int index){
 		if(index == 0){
@@ -42,11 +47,11 @@ public class MinHeap<E extends Comparable<E>> {
 
 	/**
 	 * 查找用数组实现的完全二叉树中该索引下节点的左孩子节点的索引
-	 *
+	 * 可能出界
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int leftChild(int index){
 		return (index * 2) + 1;
@@ -54,26 +59,27 @@ public class MinHeap<E extends Comparable<E>> {
 
 	/**
 	 * 查找用数组实现的完全二叉树中该索引下节点的右孩子节点的索引
-	 *
+	 * 可能出界
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int rightChild(int index){
 		return (index * 2) + 2;
 	}
 
 	/**
-	 * 向最大堆中添加元素
+	 * 向最小堆中添加元素
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
+
 	public void add(E e){
-		data.addLast(e);
+		data.addLast(e); //这边加到最后面 都是排序好的节点
 		shifUp(data.getSize() - 1);
 	}
 
@@ -82,8 +88,8 @@ public class MinHeap<E extends Comparable<E>> {
 	 *
 	 * @param k
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private void shifUp(int k) {
 		while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) > 0){
@@ -97,8 +103,8 @@ public class MinHeap<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E findMin(){
 		if(data .getSize() == 0){
@@ -112,8 +118,8 @@ public class MinHeap<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/20
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E extractMin(){
 		E result = findMin();
@@ -130,8 +136,8 @@ public class MinHeap<E extends Comparable<E>> {
 	 *
 	 * @param k
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/25
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private void siftDown(int k) {
 		while (k >= 0 && leftChild(k) < data.getSize()){

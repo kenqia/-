@@ -16,6 +16,7 @@ public class UnionFind {
     }
 
     /**
+     * 1
      * 查找元素p所对应的根节点
      *
      * @param p

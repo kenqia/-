@@ -1,8 +1,8 @@
-/**
+/**1
  * 数组
  *
- * @author
- * @version 2018/8/4
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class Array<E> {
 
@@ -35,8 +35,8 @@ public class Array<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void addFirst(E e){
 		add(0,e);
@@ -47,8 +47,8 @@ public class Array<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void addLast(E e){
 		add(size,e);
@@ -60,8 +60,8 @@ public class Array<E> {
 	 * @param index
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void add(int index, E e){
 
@@ -72,7 +72,7 @@ public class Array<E> {
 		if(size == data.length){
 //			throw new IllegalArgumentException("Add failed. Array is full.");
 			//数组动态扩容两倍
-			resize(2*data.length);
+			resize(2 * data.length);
 		}
 
 		for (int i= size-1; i >= index; i--){
@@ -95,8 +95,8 @@ public class Array<E> {
 	 *
 	 * @param index
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E get(int index){
 		if(index < 0 || index >= size){
@@ -110,8 +110,8 @@ public class Array<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E getFirst() {
 		return data[0];
@@ -122,8 +122,8 @@ public class Array<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E getLast() {
 		return get(size - 1);
@@ -135,8 +135,8 @@ public class Array<E> {
 	 * @param index
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void set(int index, E e){
 		if (index < 0 || index >= size){
@@ -150,8 +150,8 @@ public class Array<E> {
 	 *
 	 * @param e
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public boolean contains(E e){
 		for (int i = 0; i < size; i++) {
@@ -167,8 +167,8 @@ public class Array<E> {
 	 *
 	 * @param e
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public int indexOf(E e){
 		for (int i = 0; i < size; i++) {
@@ -184,8 +184,8 @@ public class Array<E> {
 	 *
 	 * @param index
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E remove(int index){
 		if (index < 0 || index >= size){
@@ -212,8 +212,8 @@ public class Array<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E removeFirst(){
 		return remove(0);
@@ -224,8 +224,8 @@ public class Array<E> {
 	 *
 	 * @param
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public E removeLast(){
 		return remove(size - 1);
@@ -236,8 +236,8 @@ public class Array<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void removeElement(E e){
 		int index = indexOf(e);
@@ -252,8 +252,8 @@ public class Array<E> {
 	 * @param i
 	 * @param j
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void swap(int i, int j){
 		if (i < 0 || i >= size || j < 0 || j >= size){
@@ -269,8 +269,8 @@ public class Array<E> {
 	 *
 	 * @param
 	 * @return java.lang.String
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	@Override
 	public String toString(){

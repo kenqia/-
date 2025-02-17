@@ -1,8 +1,8 @@
-/**
+/**1
  * 栈
  * 
- * @author
- * @version 2018/8/4
+ * @author kenqia
+ * @version 2025/2/14
  */
 public interface Stack<E> {
 
@@ -11,8 +11,8 @@ public interface Stack<E> {
 	 * 
 	 * @param  
 	 * @return int
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	int getSize();
 	
@@ -21,8 +21,8 @@ public interface Stack<E> {
 	 *
 	 * @param
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	boolean isEmpty();
 
@@ -31,8 +31,8 @@ public interface Stack<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	void push(E e);
 
@@ -41,8 +41,8 @@ public interface Stack<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	E pop();
 
@@ -51,8 +51,8 @@ public interface Stack<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/4
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	E peek();
 }

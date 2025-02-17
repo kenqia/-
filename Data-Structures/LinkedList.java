@@ -1,9 +1,9 @@
-/**
+/**1
  * 链表
  * 包含头指针、虚拟节点
  *
- * @author ronglexie
- * @version 2018/8/11
+ * @author kenqia
+ * @version 2025/2/11
  */
 public class LinkedList<E> {
 
@@ -31,8 +31,8 @@ public class LinkedList<E> {
 	 * @param index
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public void add(int index, E e){
 		if(index < 0 || index > size){
@@ -53,8 +53,8 @@ public class LinkedList<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public void addFirst(E e){
 		add(0,e);
@@ -65,8 +65,8 @@ public class LinkedList<E> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public void addLast(E e){
 		add(size,e);
@@ -77,8 +77,8 @@ public class LinkedList<E> {
 	 *
 	 * @param index
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E get(int index){
 		if(index < 0 || index > size){
@@ -96,8 +96,8 @@ public class LinkedList<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E getFirst(){
 		return get(0);
@@ -108,8 +108,8 @@ public class LinkedList<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E getLast(){
 		return get(size);
@@ -121,8 +121,8 @@ public class LinkedList<E> {
 	 * @param index
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public void set(int index, E e){
 		if(index < 0 || index > size){
@@ -140,8 +140,8 @@ public class LinkedList<E> {
 	 *
 	 * @param e
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public boolean contains(E e){
 		Node cur = dummyHead.next;
@@ -159,8 +159,8 @@ public class LinkedList<E> {
 	 *
 	 * @param index
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E remove(int index){
 		if(index < 0 || index > size){
@@ -181,8 +181,8 @@ public class LinkedList<E> {
 	 * 删除指定元素
 	 *
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void remove(E e){
 		if(!contains(e)){
@@ -208,8 +208,8 @@ public class LinkedList<E> {
 	 * 删除所有的指定元素
 	 *
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void removeAll(E e){
 		if(!contains(e)){
@@ -233,8 +233,8 @@ public class LinkedList<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E removeFirst(){
 		return remove(0);
@@ -245,8 +245,8 @@ public class LinkedList<E> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/12
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public E removeLast(){
 		return remove(size - 1);

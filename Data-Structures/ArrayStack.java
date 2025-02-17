@@ -1,8 +1,8 @@
-/**
+/**1
  * 利用动态数组实现栈
  *
- * @author
- * @version 2018/8/4
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class ArrayStack<E> implements Stack<E> {
 
@@ -31,6 +31,8 @@ public class ArrayStack<E> implements Stack<E> {
 	public int getCapacity(){
 		return array.getCapacity();
 	}
+
+	/**最后面为栈的顶 */
 
 	@Override
 	public void push(E e) {

@@ -5,8 +5,8 @@ import java.util.Stack;
 /**
  * 二分搜索树
  *
- * @author ronglexie
- * @version 2018/8/18
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class BinarySearchTree<E extends Comparable<E>> {
 
@@ -36,8 +36,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void add(E e){
 		root = add(root,e);
@@ -45,12 +45,12 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	/**
 	 * 向node为根元素的二分搜索树中插入元素
 	 * 递归算法
-	 *
+	 *不好用的
 	 * @param node
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	@Deprecated
 	private void addDeprecated(Node node,E e){
@@ -81,8 +81,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * @param node
 	 * @param e
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node add(Node node, E e){
 		//递归终止条件，返回结果为null
@@ -104,8 +104,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param e
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public boolean contains(E e){
 		return contains(root,e);
@@ -117,8 +117,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * @param node
 	 * @param e
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private boolean contains(Node node,E e){
 		if(node == null){
@@ -138,8 +138,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void preOrder(){
 		preOrder(root);
@@ -151,8 +151,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private void preOrder(Node node){
 		if(node == null){
@@ -169,8 +169,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void preOrderNR(){
 		Stack<Node> stack = new Stack<>();
@@ -192,8 +192,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void inOrder(){
 		inOrder(root);
@@ -205,8 +205,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private void inOrder(Node node){
 		if(node == null){
@@ -222,8 +222,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void postOrder(){
 		postOrder(root);
@@ -235,8 +235,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private void postOrder(Node node){
 		if(node == null){
@@ -251,10 +251,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * 层序遍历二分搜索树
 	 * 广度优先遍历，利用队列结构
 	 *
+	 * 等一下！
 	 * @param
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void levelOrder(){
 		Queue<Node> nodeQueue = new LinkedList<>();
@@ -276,8 +277,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public E minimum(){
 		if(isEmpty()){
@@ -292,8 +293,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private Node minimum(Node node) {
 		if(isEmpty()){
@@ -310,8 +311,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return E
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public E maximize(){
 		if(isEmpty()){
@@ -326,8 +327,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private Node maximize(Node node) {
 		if(isEmpty()){
@@ -344,8 +345,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public E removeMax(){
 		E maximize = maximize();
@@ -359,8 +360,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private Node removeMax(Node node){
 		if(node.right == null){
@@ -378,8 +379,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public E removeMin(){
 		E minimum = minimum();
@@ -393,8 +394,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private Node removeMin(Node node){
 		if(node.left == null){
@@ -411,8 +412,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * 删除二分搜索树中的指定元素
 	 *
 	 * @param e
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	public void remove(E e){
 		root = remove(root,e);
@@ -425,8 +426,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * @param node
 	 * @param e
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node remove(Node node, E e) {
 		if(node == null){
@@ -495,8 +496,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 * @param depth
 	 * @param result
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private void generateBSTString(Node node, int depth, StringBuilder result) {
 		if (node == null) {
@@ -513,8 +514,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	 *
 	 * @param depth
 	 * @return java.lang.String
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private String generateBSTString(int depth) {
 		StringBuilder result = new StringBuilder();
@@ -527,8 +528,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	/**
 	 * 节点类
 	 *
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private class Node{
 		public E e;
