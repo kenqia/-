@@ -3,6 +3,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
+ * 1
  * 二分搜索树
  *
  * @author kenqia
@@ -440,6 +441,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 			node.right = remove(node.right,e);
 			return node;
 		}else /*if(e.compareTo(node.e) == 0)*/{
+			/** 单子节点  与 无子节点*/
 			// 删除右子树为空的情况
 			if(node.right == null){
 				Node leftNode = node.left;
@@ -454,6 +456,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 				size --;
 				return rightNode;
 			}
+			/** 双子节点 */
 			// 删除左子树、右子树均不为空的情况
 			else {
 				// 1、删除后用后继节点替代该位置(后继节点即待删除节点右子树中的最小节点)

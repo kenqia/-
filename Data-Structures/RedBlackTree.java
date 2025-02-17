@@ -2,8 +2,8 @@
  * 红黑树
  * LLRB Tree
  *
- * @author ronglexie
- * @version 2018/9/2
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class RedBlackTree<K extends Comparable<K>,V> {
 
@@ -23,8 +23,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return RedBlackTree<K,V>.Node
-	 * @author ronglexie
-	 * @version 2018/9/2
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	//   node                     x
 	//  /   \     左旋转         /  \
@@ -46,8 +46,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/2
+	 * @author kenqia
+	 * @version 2025/2/2
 	 */
 	private void flipColors(Node node){
 		node.color = RED;
@@ -60,8 +60,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return RedBlackTree<K,V>.Node
-	 * @author ronglexie
-	 * @version 2018/9/2
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	//     node                   x
 	//    /   \     右旋转       /  \
@@ -86,8 +86,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/2
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public boolean isRed(Node node) {
 		if(node == null){
@@ -102,8 +102,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 * @param key
 	 * @param value
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/2
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void add(K key, V value) {
 		root = add(root,key,value);
@@ -118,8 +118,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 * @param key
 	 * @param value
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node add(Node node, K key, V value){
 		//递归终止条件，返回结果为null
@@ -162,8 +162,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param
 	 * @return V
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public V minimum(){
 		if(isEmpty()){
@@ -178,8 +178,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node minimum(Node node) {
 		if(isEmpty()){
@@ -196,8 +196,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param
 	 * @return V
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public V maximize(){
 		if(isEmpty()){
@@ -212,8 +212,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private Node maximize(Node node) {
 		if(isEmpty()){
@@ -230,8 +230,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param
 	 * @return V
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public V removeMax(){
 		V maximize = maximize();
@@ -245,8 +245,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node removeMax(Node node){
 		if(node.right == null){
@@ -255,7 +255,7 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 			size --;
 			return leftNode;
 		}
-		node.right = removeMin(node.right);
+		node.right = removeMax(node.right);
 		return node;
 	}
 
@@ -264,8 +264,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public V removeMin(){
 		V minimum = minimum();
@@ -279,8 +279,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 *
 	 * @param node
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node removeMin(Node node){
 		if(node.left == null){
@@ -309,8 +309,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 * @param node
 	 * @param key
 	 * @return BinarySearchTree<E>.Node
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	private Node remove(Node node, K key) {
 		if(node == null){
@@ -396,8 +396,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	 * @param node
 	 * @param key
 	 * @return Node
-	 * @author ronglexie
-	 * @version 2018/8/19
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public Node getNode(Node node,K key){
 		if(node == null){
@@ -417,8 +417,8 @@ public class RedBlackTree<K extends Comparable<K>,V> {
 	/**
 	 * 节点类
 	 *
-	 * @author ronglexie
-	 * @version 2018/8/18
+	 * @author kenqia
+	 * @version 2025/2/18
 	 */
 	private class Node{
 
