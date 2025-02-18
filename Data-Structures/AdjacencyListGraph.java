@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//1
 public class AdjacencyListGraph {
     private static final int MaxVnum = 100;
     private static Scanner sc = new Scanner(System.in);
@@ -68,6 +68,12 @@ public class AdjacencyListGraph {
             }
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        AdjacencyListGraph.AlGraph x = new AlGraph();
+        AdjacencyListGraph.createGraph(x);
+        AdjacencyListGraph.print(x);
     }
 
 }

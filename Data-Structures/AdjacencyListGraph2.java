@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/**
+/**1
  * 邻接矩阵的实现方式
  * 在以下 V表示顶点数 E表示图的边数
  * 空间复杂度 O(V^2)  
@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * 两点是否相邻 O(1)
  * 查找所有邻边 O(V)   需要全部遍历一次
  */
+
 public class AdjacencyListGraph2 {
     private int V; // 图的顶点数
     private int E; // 图的边数
