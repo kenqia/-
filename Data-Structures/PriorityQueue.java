@@ -1,9 +1,10 @@
 /**
  * 优先队列
  * 利用最大堆实现
+ * 1
  *
- * @author ronglexie
- * @version 2018/8/25
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class PriorityQueue<E extends Comparable<E>> {
 

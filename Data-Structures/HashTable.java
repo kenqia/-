@@ -3,8 +3,8 @@ import java.util.TreeMap;
 /**
  * 哈希表
  *
- * @author ronglexie
- * @version 2018/9/6
+ * @author kenqia
+ * @version 2025/2/14
  */
 public class HashTable<K, V> {
 
@@ -50,8 +50,8 @@ public class HashTable<K, V> {
 	 * @param key
 	 * @param value
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/6
+	 * @author kenqia
+	 * @version 2025/2/14
 	 */
 	public void add(K key, V value){
 		TreeMap<K, V> treeMap = hashTable[hash(key)];
@@ -73,8 +73,8 @@ public class HashTable<K, V> {
 	 *
 	 * @param key
 	 * @return V
-	 * @author ronglexie
-	 * @version 2018/9/6
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public V remove(K key){
 		TreeMap<K, V> treeMap = hashTable[hash(key)];
@@ -97,8 +97,8 @@ public class HashTable<K, V> {
 	 * @param key
 	 * @param value
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/6
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public void set(K key, V value){
 		TreeMap<K, V> treeMap = hashTable[hash(key)];
@@ -114,8 +114,8 @@ public class HashTable<K, V> {
 	 *
 	 * @param key
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/6
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public boolean contains(K key){
 		return hashTable[hash(key)].containsKey(key);
@@ -126,8 +126,8 @@ public class HashTable<K, V> {
 	 *
 	 * @param key
 	 * @return V
-	 * @author ronglexie
-	 * @version 2018/9/6
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	public V get(K key){
 		return hashTable[hash(key)].get(key);
@@ -138,8 +138,8 @@ public class HashTable<K, V> {
 	 *
 	 * @param newCapacity
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/7
+	 * @author kenqia
+	 * @version 2025/2/12
 	 */
 	private void resize(int newCapacity) {
 		TreeMap<K, V>[] newHashTable = new TreeMap[newCapacity];
