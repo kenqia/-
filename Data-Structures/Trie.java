@@ -2,13 +2,13 @@ import java.util.TreeMap;
 
 /**
  * Trie树（前缀树、字典树）
- *
- * @author ronglexie
- * @version 2018/9/1
+ * 1 递归太难看了
+ * @author kenqia
+ * @version 2025/2/13
  */
 public class Trie {
 
-	private Node root;
+	private Node root; //root是哨兵节点
 	private int size;
 
 	public Trie() {
@@ -25,8 +25,8 @@ public class Trie {
 	 *
 	 * @param word
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public void add(String word){
 		Node cur = root;
@@ -48,8 +48,8 @@ public class Trie {
 	 *
 	 * @param word
 	 * @return void
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public void addRecursion(String word){
 		root = addRecursion(root,word);
@@ -61,8 +61,8 @@ public class Trie {
 	 * @param node
 	 * @param word
 	 * @return Trie.Node
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	private Node addRecursion(Node node, String word){
 		if(node == null){
@@ -86,8 +86,8 @@ public class Trie {
 	 *
 	 * @param word
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public boolean contains(String word){
 		Node cur = root;
@@ -106,8 +106,8 @@ public class Trie {
 	 *
 	 * @param word
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public boolean containsRecurison(String word){
 		return containsRecurison(root,word);
@@ -119,8 +119,8 @@ public class Trie {
 	 * @param node
 	 * @param word
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	private boolean containsRecurison(Node node, String word) {
 		if(node == null){
@@ -142,8 +142,8 @@ public class Trie {
 	 *
 	 * @param prefix
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	private boolean isPrefix(String prefix){
 		Node cur = root;
@@ -163,8 +163,8 @@ public class Trie {
 	 *
 	 * @param word
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	public boolean isPrefixRecurison(String word){
 		return isPrefixRecurison(root,word);
@@ -176,8 +176,8 @@ public class Trie {
 	 * @param node
 	 * @param word
 	 * @return boolean
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	private boolean isPrefixRecurison(Node node, String word) {
 		if(node == null){
@@ -198,8 +198,8 @@ public class Trie {
 	/**
 	 * 节点类
 	 *
-	 * @author ronglexie
-	 * @version 2018/9/1
+	 * @author kenqia
+	 * @version 2025/2/13
 	 */
 	private class Node{
 		public boolean isWord;

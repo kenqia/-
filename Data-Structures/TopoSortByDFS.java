@@ -6,11 +6,11 @@
 //// 深度优先遍历实现拓扑排序
 //// 深度优先不能检测是否有环
 //public class TopoSortByDFS {
-//    private Graph G;
+//    private AdjacencyListGraph2 G;
 //    private ArrayList<Integer> res;
 //    private boolean isCycle;
 //
-//    public TopoSortByDFS(Graph g) {
+//    public TopoSortByDFS(AdjacencyListGraph2 g) {
 //        this.G = g;
 //        if (!G.isDirection()) throw new RuntimeException("Topo sort only work on direction graph.");
 //

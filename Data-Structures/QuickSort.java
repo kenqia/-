@@ -30,8 +30,8 @@ public class QuickSort {
         int j = right;
         while (i < j) {
             // 从后向前扫描
-            while (i < j && array[j] >= target)
-                j--;
+            while (i < j && array[j] >= target) j--;
+
             if (array[j] < target) {
                 array[i] = array[j];
                 i++;

@@ -1,3 +1,4 @@
+//1
 public class WeightGraphEdges implements Comparable<WeightGraphEdges> {
     private int v, w, weight;
     public WeightGraphEdges(int v, int w, int weight) {
